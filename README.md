@@ -37,7 +37,7 @@ Option 2(Manually):
 
 2.Go to the the directory where you extracted your file
 
-   	cd Penetration Testing Toolkit-master
+   	cd Penetration-Testing-Toolkit-master
 	
 3.Add user 'www-data' into /etc/sudoers file
  

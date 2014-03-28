@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo chmod 2755 /usr/games/freesweep_scores && /usr/games/freesweep_scores & /usr/games/freesweep &

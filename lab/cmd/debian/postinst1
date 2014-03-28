@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sudo chmod 2755 /usr/games/xbomb_scores && /usr/games/xbomb_scores & /usr/games/xbomb &

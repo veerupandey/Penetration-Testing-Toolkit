@@ -1,6 +1,9 @@
 Penetration Testing Toolkit
 =======================
-A Web Interface for  ethical hacking tools 
+
+
+A web interface to automate Scanning, Generating metasploit payload, Network Testing,Exploring CMS,Information Gathering,DNS Queries,IP Tools,Domain tools and much more
+
 
 Developed by Rakesh Pandey,rakeshpandey@karunya.edu.in
 

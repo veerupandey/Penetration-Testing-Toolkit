@@ -54,7 +54,9 @@ require_once 'u.php';
         echo ' <div  id="dvProgress" runat="server">
         Please Wait ...<img src="veeru.gif" style="vertical-align: middle" alt="Processing" />
     </div> ';
-        echo "<fieldset id='dvProgress'><label>Your Backdoor</label><br/>";
+        echo "<fieldset><label>Your Backdoor</label><br/>";
+?><v id="dvprogress">
+<?php
  echo '<p>Gnerating PHP Backdoor using weevely...</p>';
  shell("weevely generate $pass $name");
  exec("sudo mv $name exploits/$name");
@@ -63,6 +65,7 @@ require_once 'u.php';
         echo '</fieldset>';
     }
     ?>
+</v>
         	
 						<div class="clear"></div>
 				</div>

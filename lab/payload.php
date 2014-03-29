@@ -88,9 +88,10 @@ require_once 'u.php';
  </fieldset>
     <fieldset>
         <label>Web Shell</label><label style="float:right;margin-right: 2%">Description</label><br/>
-      <p><input type="radio" value="c13" name="c">PHP <v style=" float: right;margin-right:  4%">PHP Meterpreter, PHP Reverse TCP Stager
+        <p><input  type="radio" value="c13" name="c" >PHP<v style=" float: right;margin-right:  4%">PHP Meterpreter Reverse_tcp
 
 </v> </p>
+      
  <p><input  type="radio" value="c14" name="c" >ASP<v style=" float: right;margin-right:  4%">ASP Page with metasploit payload
 
 </v> </p>

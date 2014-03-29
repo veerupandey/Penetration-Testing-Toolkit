@@ -136,6 +136,7 @@
                     <li class="icn_settings"><a href="exe.php">Backdooring exe</a></li>
                     <li class="icn_security"><a href="deb.php">Debian package backdoor</a></li>
                     <li class="icn_categories"><a href="check.php">PDF Backdoor</a></li>
+                    <li class="icn_jump_back"><a href="phpbackdoor.php">PHP Backdoor</a></li>
                         </ul>
  
                 

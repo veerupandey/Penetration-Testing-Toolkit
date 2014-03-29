@@ -97,8 +97,8 @@ require_once 'u.php';
     
     <fieldset>
         <label>Step 2d.</label><b>www-data@192.168.2.29:  </b>
-        <code>shell.sh ls</code><p>
-        <b>Format :</b> shell.sh  system_command</p>
+        <code>ls</code><p>
+        <b>Format :</b> shell.sh (system_command)</p>
     </fieldset>
         <fieldset>
             <label>Step 2e.</label>Use NetCat to listen for an incoming connection in your attacker computer

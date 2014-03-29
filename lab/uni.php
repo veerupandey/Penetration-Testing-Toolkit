@@ -86,7 +86,7 @@ $str.=$value;
 		
 	}
 shell("echo 'Starting uniscan..'");
-shell("sudo uniscan -b $str -u  $url|sed -e '1,5d'");
+shell("sudo uniscan -b $str -u  $url|sed -e '1,6d'");
 	
         
         echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Execution Finished!You Can see Full result in result section'});</script>";

@@ -22,7 +22,7 @@ fi
 echo "Please enetr your web directory path(/var/www):"
 read path
 
-if [ $path ='' ];then 
+if [ -z "$path" ];then 
 path='/var/www'
 fi
 
@@ -54,6 +54,9 @@ read ans
 if [ $ans = y  ]; then
 	echo "enter Ubuntu Version (precise quantal raring)":
 	read version
+       if [ -z "$version" ];then
+	version='precise'
+       fi
 	echo "deb http://ppa.launchpad.net/wagungs/kali-linux/ubuntu $version  main ">>/etc/apt/sources.list
         echo "deb http://ppa.launchpad.net/wagungs/kali-linux1/ubuntu $version  main ">>/etc/apt/sources.list
 	echo "deb http://ppa.launchpad.net/wagungs/kali-linux2/ubuntu $version  main ">>/etc/apt/sources.list

@@ -63,7 +63,7 @@ echo'***************************************************************************
 echo '<p><b>LHOST</b>                     -->'.$ip.'</p>';
 echo '<p><b>LPORT</b>                     -->'.$port.'</p>';
 echo '<p><b>PACKAGE NAME</b>              -->'.$pkg.'</p>';
-echo '<p><b>PAYLOAD</b>                   -->windows/shell_reverse_tcp</p>';
+echo '<p><b>PAYLOAD</b>                   -->'.$c.'</p>';
 echo '<p><b>AVAILABLE FOR DOWNLOAD in default format @</b>  --><a href=exploits/'.$pkg.'>Click here</a>';
 echo '<p><b>AVAILABLE FOR DOWNLOAD in zip format along with autorun files@</b>  --><a href=exploits/'.$pkg.'.zip>Click here</a>';
 

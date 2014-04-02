@@ -71,10 +71,7 @@ require_once 'u.php';
     <td><input type="radio" name="c" value="c7"></td> 
     				<td>GeoLocation</td> 
                                 </tr> </p>
-<p   <tr> 
-    <td><input type="radio" name="c" value="c8"></td> 
-    <td>Wordpress PingBack Port Scanner</td> <td><fieldset><input type="text" name="ur" value="Enter at least one  WordpressSite to pingback Target site e.g..http://www.myblog1.com/ /" style="background:floralwhite " maxlength="100" size="20"> </fieldset></td>
-                                </tr> </p>
+
 
     </fieldset>			
 						<div class="clear"></div>
@@ -114,7 +111,7 @@ require_once 'u.php';
               case c1:
                   echo "<p><b>Starting Non Intrusive checks on $url </b></p> ";
                 shell("");
-                  shell("sudo wpscan --url $url | sed -r 's/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[mGK]//g' ");
+                  shell("sudo wpscan --url $url | sed -e '1,15d' ");
                   break;
               case c2:
                 echo "<p><b>Detecting Version of wordpress on $url</b></p>"; 
@@ -146,11 +143,8 @@ require_once 'u.php';
                      shell("");
                  shell("sudo python ./cmd/geoedge.py $url|grep 'IP\|Country\|City\|Coordinates'");
                  break;
-              case c8:
-                     echo "<p><b>Starting Wordpress PingBack Port Scanner  for $url through $ur ..</b></p>";
-                     shell("");
-                    shell(" sudo ruby /var/www/lab/cmd/wp/wppps.rb $url  $ur "); 
-                    break;
+              
+	     
 
              
           }

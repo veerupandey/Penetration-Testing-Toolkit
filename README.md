@@ -66,7 +66,7 @@ Option 2(Manually):
 
 Dependencies
 =======================
-nmap, mingw32,siege, metasploit(msf), nikto, whatweb, sslyze, wapiti, amap, xprobe, dmitry, wpscan, joomscan, blindelephant, dnstracer, curl, lynx, mtr, fping, urlcrazy, automater, shellinabox, nbtscan,uniscan,lbd,weevely
+nmap, mingw32,siege, metasploit(msf), nikto, whatweb, sslyze, wapiti, amap, xprobe, dmitry, wpscan, joomscan, blindelephant, dnstracer, curl, lynx, mtr, fping, urlcrazy, automater, shellinabox, nbtscan,uniscan,lbd,weevely,amap
 
 How To Use	
 =======================

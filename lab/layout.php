@@ -77,6 +77,15 @@
     $(function(){
         $('.column').equalHeight();
     });
+
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('body').hide().slideUp ("slow").toggle( "slide" );
+
+
+    });
 </script>
 
 </head>

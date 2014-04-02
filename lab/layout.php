@@ -183,7 +183,7 @@
                 <h3>Execute System Commands</h3>
 <ul class="toggle">
                            <?php $host=$_SERVER['SERVER_ADDR'];?>
-			<li class="icn_settings"><?php echo "<a href='https://$host:4200/'>";?>Terminal</a></li>
+			<li class="icn_settings"><?php echo "<a href='https://$host:4200/' target='_blank'>";?>Terminal</a></li>
 		
 		</ul>
            

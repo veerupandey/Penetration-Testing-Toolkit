@@ -25,27 +25,17 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Penetration Testing Toolkit</title>
-        <link rel="stylesheet" href="v.css" type="text/css" media="screen" />
-	
-	<link rel="stylesheet" href="css/layout.css" type="text/css" media="screen" />
+       	<link rel="stylesheet" href="css/layout.css" type="text/css" media="screen" />
         <link media="screen" href="dlgs/jquery.msg.css" rel="stylesheet" type="text/css">
         <script src="js/jquery-2.1.0.min.js" type="text/javascript"></script>
   
         <script type="text/javascript" src="dlgs/jquery.center.min.js"></script>
         <script type="text/javascript" src="dlgs/jquery.msg.js"></script>
 
-        
-	
-        
 	<script src="js/hideshow.js" type="text/javascript"></script>
 	<script src="js/jquery.tablesorter.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/jquery.equalHeight.js"></script>
        
-            
-    
-    
-        
-    </script>
 	<script type="text/javascript">
 	$(document).ready(function() 
     	{ 
@@ -82,7 +72,7 @@
 </script>
 <script type="text/javascript">
     $(document).ready(function() {
-        $('body').hide().slideUp ("slow").toggle( "slide" );
+        $('body').hide().slideUp ("slow").toggle('slide','swing');
 
 
     });
@@ -95,7 +85,7 @@
 
 	<header id="header">
 		<hgroup>
-			<h1 class="site_title"><a href="index.php">Pen-Tools</a></h1>
+			<h1 class="site_title"><a href="index.php">Tools</a></h1>
                         <h2 class="section_title">Penetration Testing Toolkit</h2>
 		</hgroup>
 	</header> <!-- end of header bar -->
@@ -149,14 +139,7 @@
                         </ul>
  
                 
-<h3>CMS Explorer</h3>
-		<ul class="toggle">
-			<li class="icn_settings"><a href="wordpress.php">Wordpress</a></li>
-			<li class="icn_security"><a href="joomla.php">Joomla</a></li>
-			<li class="icn_categories"><a href="drupal.php">Drupal</a></li>
-                        <li class="icn_jump_back"><a href="cms.php">Detect Version of CMS</a></li>
-		</ul>
-		
+
 		<h3>Network Tools</h3>
 		<ul class="toggle">
 			<li class="icn_security"><a href="dns.php">DNS Queries</a></li>
@@ -176,7 +159,16 @@
 			
 			
 		</ul>
-                
+
+                <h3>CMS Explorer</h3>
+		<ul class="toggle">
+			<li class="icn_settings"><a href="wordpress.php">Wordpress</a></li>
+			<li class="icn_security"><a href="joomla.php">Joomla</a></li>
+			<li class="icn_categories"><a href="drupal.php">Drupal</a></li>
+                        <li class="icn_jump_back"><a href="cms.php">Detect CMS Version</a></li>
+		</ul>
+		
+  
 		
                 <h3>Other Web Tools</h3>
                 <ul class="toggle">
@@ -188,7 +180,8 @@
 		
                          
                 </ul>
-  
+
+		
                 <h3>Execute System Commands</h3>
 <ul class="toggle">
                            <?php $host=$_SERVER['SERVER_ADDR'];?>

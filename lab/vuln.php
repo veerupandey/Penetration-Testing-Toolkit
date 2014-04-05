@@ -87,8 +87,7 @@ require_once 'u.php';
                   
                             echo "<p><b>Getting HTTP Header and Displaying Transactions for $url:</b></p>";
                        shell(" siege  -g $url");
-                        shell("");
-                         echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'Scanning Done! Refer Result section for details'});</script>";
+                        
                            }
                            if(isset($c2))
                            {
@@ -97,40 +96,41 @@ require_once 'u.php';
                             echo "<p><b>Scanning web server on $url for dangerous Files,Outdated Versions... etc:</b></p>";
                             shell("echo 'Starting......'");
                             shell(" nikto -host $url|sed -e '1,1d'");
-                            echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'Scanning Done  for $url..See details in Result section'});</script>";
+                           
                            }
                            if(isset($c3)){
                                echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'Whatweb for  $url..See details in Result section'});</script>";
                                echo "<p><b>Whatweb Scan Started for $url:</b></p>";
                                shell(" whatweb -v  $url");
-                               echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'Scanning Done for $url..See details in Result section'});</script>";
+                               
                            }
              
                            if(isset($c4)){
                                echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'Testing SSL configuration for $url..See details in Result section'});</script>";
                                echo "<p><b> SSL-check  for $url:</b></p>";
                                shell(" sslyze $url:$port0 |sed -e '1,11d'");
-                               echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'Scanning Done for $url..See details in Result section'});</script>";
+                               
                            }
                            if(isset($c5)){
                                echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'Checking  if $url uses load balancing..See details in Result section'});</script>";
                                echo "<p><b>Checking  if $url uses load balancing</b></p>";
                                shell("lbd $url|sed -e '1,3d'");
-                               echo "<script type='ext/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'Scanning Done for $url..See details in Result section'});</script>";
+                               
                            }
                            if(isset($c6)){
                                echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'Detecting firewall for $url..See details in Result section'});</script>";
                                echo "<p><b>Detecting firewall for  $url :</b></p>";
                                shell("wafw00f $url |sed -e '1,13d'");
-                               echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'Scanning Done for $url..See details in Result section'});</script>";
+                               
                
                            }
                            if(isset($c7)){
                               echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'Detecting Application @ $port on  $url..See details in Result section'});</script>";
                               echo "<p><b>Detecting Application at port  $port on $url  :</b></p>";
                               shell("sudo amap -A $url $port|grep 'Protocol\|Unidentified'");
-                             echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'Scanning Done for $url..See details in Result section'});</script>";
+                             
                            }
+echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'Scanning Done for $url..See details in Result section'});</script>";
          echo '</div>
                                     <footer>
 				<div align="left">

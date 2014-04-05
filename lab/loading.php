@@ -21,8 +21,11 @@
 <article class="module width_full ">
 			<header><h3 >Result</h3></header>
 				<div class="module_content">
+
                  
  <div  id="dvProgress" runat="server">
         Please Wait ...<img src="veeru.gif" style="vertical-align: middle" alt="Processing" />
+
     </div> 
+
 

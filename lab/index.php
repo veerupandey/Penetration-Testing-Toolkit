@@ -43,14 +43,14 @@ require_once 'u.php';
     <fieldset>
         <legend>Scan Options</legend>
 		<p><input type="checkbox" name="options[]" value=""  />Ping Host To Check if its Alive</p>
-		<p><input  type="checkbox" name="options[]" value=" -O --osscan-guess" checked="checked" />Detect Operating System</p>
-		<p><input  type="checkbox" name="options[]" value=" -sV" />Detect Service Version</p>
-		<p><input  type="checkbox" name="options[]" value=" --traceroute"  /> Do Traceroute</p>
-		<p><input  type="checkbox" name="options[]" value=" -sU"  /> UDP Port Scan</p>
+		<p><input  type="checkbox" name="options[]" value=" -O --osscan-guess " checked="checked" />Detect Operating System</p>
+		<p><input  type="checkbox" name="options[]" value=" -sV " />Detect Service Version</p>
+		<p><input  type="checkbox" name="options[]" value=" --traceroute "  /> Do Traceroute</p>
+		<p><input  type="checkbox" name="options[]" value=" -sU "  /> UDP Port Scan</p>
 		<p><input  type="checkbox" name="options[]" value=" -p 1-65535 "  /> TCP Port Scan</p>
-		<p><input  type="checkbox" name="options[]" value=" -T4 -A -Pn"  /> Intense Scan When Network blocks pinging</p>
+		<p><input  type="checkbox" name="options[]" value=" -T4 -A -Pn "  /> Intense Scan When Network blocks pinging</p>
 		<p><input  type="checkbox" name="options[]" value=" --script ip-geolocation-* " />Target Geolocation</p>
-                <p><input  type="checkbox" name="options[]" value=" --script whois" />Information about the registrar and contact names</p>
+                <p><input  type="checkbox" name="options[]" value=" --script whois " />Information about the registrar and contact names</p>
        </fieldset>
         
 
@@ -60,7 +60,7 @@ require_once 'u.php';
 				<div class="submit_link">
 					
                                     <input type="submit" name="submit" value="Start Scanning Now" class="alt_btn" id="submit" >
-                                    <a href="main.php"><input type="button" value="Reset" id="reset"> </a>
+                                    <input type="reset" value="Reset" id="reset"> </a>
 				</div>
 			</footer>
                         
@@ -70,14 +70,14 @@ require_once 'u.php';
                 <?php
               if(isset($_POST['submit'])){
                $url = $_POST['url'];
-require_once 'loading.php';
+
  if($url==''){
                    
                    echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'You Have not entered any URL.Please enter an URL to continue..'});</script>";
               }
                
  else {
-      
+      require_once 'loading.php';
 	if(preg_match("#;|\||&|%#", $url)){ die("Bad, very bad, this characters are not accepted: ; | & %");}
 	
 

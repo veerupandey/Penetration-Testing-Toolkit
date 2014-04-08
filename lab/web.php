@@ -75,7 +75,13 @@ require_once 'u.php';
                     $url=$_POST['url'];
                     $c=$_POST['c'];
                    
-                    
+                 $url = trim($url); //remove space from start and end of url
+               if(substr(strtolower($url), 0, 7) == "http://") $url = substr($url, 7); // remove http:// if included
+                if(substr(strtolower($url), 0, 8) == "https://") $url = substr($url, 8);
+      
+                     $url_parts = explode("/", $url);
+                     $url = $url_parts[0];
+                       
          
                if($url==''){
                    echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'You Have not entered any URL.Please enter an URL to continue..'});</script>";

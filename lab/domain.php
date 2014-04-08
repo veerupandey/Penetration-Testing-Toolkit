@@ -95,7 +95,15 @@ require_once 'u.php';
                     
                     
                                      
-                    
+                 $url = trim($url); //remove space from start and end of domain
+                if(substr(strtolower($url), 0, 7) == "http://") $url = substr($url, 7); // remove http:// if included
+                if(substr(strtolower($url), 0, 8) == "https://") $url = substr($url, 8); // remove http:// if included
+                if(substr(strtolower($url), 0, 4) == "www.") $url = substr($url, 4);//remove www from domain
+               
+               
+               $url_parts = explode("/", $url);
+                     $url = $url_parts[0];
+                  
                 
                
                 

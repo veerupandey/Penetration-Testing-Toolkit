@@ -73,7 +73,14 @@ require_once 'u.php';
                     
                     $port0=$_POST['port0'];
                     $port=$_POST['port'];
-               require_once 'loading.php';     
+                    $url = trim($url); //remove space from start and end of url
+               if(substr(strtolower($url), 0, 7) == "http://") $url = substr($url, 7); // remove http:// if included
+                if(substr(strtolower($url), 0, 8) == "https://") $url = substr($url, 8);
+      
+                     $url_parts = explode("/", $url);
+                     $url = $url_parts[0];
+                    
+                     require_once 'loading.php';     
             if($url==''){
                     echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'You Have not entered any URL.Please enter an URL to continue..'});</script>";
                   die("!!!!You Have Not Entered any URL!!!!");

@@ -97,7 +97,13 @@ require_once 'u.php';
                     
                     $data=$_POST['data'];
                     
-                   
+                 $url = trim($url); //remove space from start and end of url
+               if(substr(strtolower($url), 0, 7) == "http://") $url = substr($url, 7); // remove http:// if included
+                if(substr(strtolower($url), 0, 8) == "https://") $url = substr($url, 8);
+      
+                     $url_parts = explode("/", $url);
+                     $url = $url_parts[0];
+                      
                        
                     
                     

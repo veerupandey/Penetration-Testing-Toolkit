@@ -37,7 +37,7 @@ require_once 'u.php';
 				<div class="module_content">
 <form name="form1" action="" method="post"><fieldset>
 		<legend>Target:</legend>
-                <label> URL:</label></p><input id="ur" type="text" name="url" value="" />
+                <label> URL:</label>e.g..  www.site.com, 192.168.2.29</p><input id="ur" type="text" name="url" value="" />
 </fieldset>
 
     <fieldset>
@@ -89,7 +89,13 @@ $str.=$value;
 
 		
 	}
-
+$url = trim($url); //remove space from start and end of url
+               if(substr(strtolower($url), 0, 7) == "http://") $url = substr($url, 7); // remove http:// if included
+                if(substr(strtolower($url), 0, 8) == "https://") $url = substr($url, 8);
+      
+                     $url_parts = explode("/", $url);
+                     $url = $url_parts[0];
+                    
 shell("sudo nmap $str $url");
 	
         

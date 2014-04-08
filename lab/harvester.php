@@ -105,10 +105,15 @@ require_once 'u.php';
                     $c3=$_POST['c5'];
                     $limit=$_POST['limit'];
                     
-                
+                $url = trim($url); //remove space from start and end of domain
+                if(substr(strtolower($url), 0, 7) == "http://") $url = substr($url, 7); // remove http:// if included
+                if(substr(strtolower($url), 0, 8) == "https://") $url = substr($url, 8); // remove http:// if included
+                if(substr(strtolower($url), 0, 4) == "www.") $url = substr($url, 4);//remove www from domain
                
                
-               
+               $url_parts = explode("/", $url);
+                     $url = $url_parts[0];
+              
                if($url==''){
                     
                    echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'You Have not entered any URL.Please enter an URL to continue..'});</script>";

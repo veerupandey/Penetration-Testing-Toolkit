@@ -52,7 +52,7 @@ require_once 'u.php';
 				<div class="submit_link">
 					
                                     <input type="submit" name="submit" value="Start Ping-Sweep" class="alt_btn" id="submit">
-                                   ><input type="reset" value="Reset" >
+                                   <input type="reset" value="Reset" >
 				</div>
 			</footer>
 		</article><!-- end of post new article -->

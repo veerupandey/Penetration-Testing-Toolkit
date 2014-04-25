@@ -57,7 +57,7 @@ sed -i 's/$/"/' random
 sed -i 's/^/"/' random
 cat random >> build.c
 echo ';' >> build.c
-echo 'char payload[] ="";' >> build.c
+echo 'char payload[] =' >> build.c
 cat msf.c |grep -v "unsigned" >> build.c
 echo 'char comment[512] = "";' >> build.c
 echo 'int main(int argc, char **argv) {' >> build.c

@@ -17,20 +17,6 @@ else
    echo [*] [Check User]: $USER ;
    sleep 1
 fi
-
-#Copying to web directory
-echo "Please enetr your web directory path(/var/www):"
-read path
-
-if [ -z "$path" ];then 
-path='/var/www'
-fi
-
-echo copying files to $path
-cp -r ./lab $path
-chmod 777 -R $path/lab
-
-
 # Backbox repository
 echo "Do you want me to add backbox repositories(needed)[y/n] ?:"
 read ans
@@ -80,19 +66,34 @@ echo "Installing Apache and PHP..............."
 apt-get install apache2 php5 libapache2-mod-php5
 service apache2 restart 
 
+#Copying to web directory
+echo "Please enter your web directory path(/var/www):"
+read path
+
+if [ -z "$path" ];then 
+path='/var/www'
+fi
+
+echo copying files to $path
+cp -r ./lab $path
+chmod 777 -R $path/lab
+
 
 #installing required package
 echo "Do you hav metasploit installed [y/n] ?:"
 read ans	
 if [ $ans = y  ]; then
-	apt-get install nmap mingw32 mingw32-runtime mingw-w64 mingw32-binutils siege  nikto whatweb sslyze  wapiti amap  xprobe dmitry wpscan joomscan blindelephant dnstracer curl lynx mtr fping urlcrazy automater shellinabox nbtscan weevely amap
+	apt-get install nmap mingw32 mingw32-runtime mingw-w64 mingw32-binutils siege  nikto whatweb sslyze  wapiti amap  xprobe dmitry  joomscan blindelephant dnstracer curl lynx mtr fping  automater shellinabox nbtscan weevely amap
 
  else
 	if [ $ans = n ];then
-        apt-get install nmap mingw32 mingw32-runtime mingw-w64 mingw32-binutils siege msf nikto whatweb sslyze wapiti amap  xprobe dmitry wpscan joomscan blindelephant dnstracer curl lynx mtr fping urlcrazy automater shellinabox nbtscan weevely amap
+        apt-get install nmap mingw32 mingw32-runtime mingw-w64 mingw32-binutils siege msf nikto whatweb sslyze wapiti amap  xprobe dmitry  joomscan blindelephant dnstracer curl lynx mtr fping  automater shellinabox nbtscan weevely amap
 
 fi
 fi
+
+#installing urlcrazy and wpscan
+sudo apt-get install urlcrazy wpscan
 
 #uniscan and lbd
 wget https://launchpad.net/~darklordpaunik8880/+archive/darksmsaucy2/+files/lbd_0.1-1saucy0ubuntu1_all.deb

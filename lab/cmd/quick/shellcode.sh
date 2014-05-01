@@ -35,5 +35,5 @@ items="15"
 							i586-mingw32msvc-gcc -Wall final.c -o final.exe > /dev/null 2>&1
 							echo "[ ok ]Payload Successfully generated "
 							mv final.exe $3
-rm clean.c ready.c final.c final.exe payload.c temp1 temp2 temp3							
+rm clean.c ready.c final.c  payload.c temp1 temp2 temp3							
 						

@@ -89,7 +89,7 @@ require_once 'u.php';
 				<div class="submit_link">
 					
                                     <input type="submit" name="submit" value="Start DNS Test" class="alt_btn" id="submit">
-                                    <a href="dns.php"><input type="button" value="Reset" id="reset"></a>
+                                    <input type="reset" value="Reset" id="reset">
 				</div>
 			</footer>
 		</article><!-- end of post new article -->

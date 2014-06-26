@@ -43,8 +43,7 @@ require_once 'u.php';
                                                         
 						</fieldset>
       
-      <tr> 
-          <td><input type="radio" name="c" value="c1" checked="true"></td> 
+      <p><input type="radio" name="c" value="c1" checked="true"></td> 
     				<td>Domain Availaility Checker</td> 
 				</tr> 
                                 <p   <tr> 
@@ -68,6 +67,16 @@ require_once 'u.php';
     <td><input type="radio" name="c" value="c6"></td> 
     				<td>Whois Lookup</td> 
                                 </tr> </p>
+<p   <tr> 
+    <td><input type="radio" name="c" value="c7"></td> 
+    				<td>Generate and Test Domain Typos</td> 
+                                </tr> </p>
+<p   <tr> 
+    <td><input type="radio" name="c" value="c8"></td> 
+    				<td> Investigate domain with the common web based tools(Automator) </td> 
+                                </tr> </p>
+
+
 
 						
 						<div class="clear"></div>
@@ -697,7 +706,42 @@ if($domain) {
 }
 
                  break;
-              
+              case c7:
+                     $url = trim($url); //remove space from start and end of domain
+                if(substr(strtolower($url), 0, 7) == "http://") $url = substr($url, 7); // remove http:// if included
+                if(substr(strtolower($url), 0, 8) == "https://") $url = substr($url, 8); // remove http:// if included
+                if(substr(strtolower($url), 0, 4) == "www.") $url = substr($url, 4);//remove www from domain
+               
+               
+               $url_parts = explode("/", $url);
+                     $url = $url_parts[0];
+                     
+                  echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Generating Domain Typos!Please refer result section after this message'});</script>";
+          echo "<p><b>Generating and Testing Domain Typs</b></p>";
+          shell("");
+          shell("urlcrazy $url");
+          echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Domain Typos Generated!Please refer result section after this message'});</script>";
+          
+                 break;
+                 
+              case c8:
+                   $url = trim($url); //remove space from start and end of domain
+                if(substr(strtolower($url), 0, 7) == "http://") $url = substr($url, 7); // remove http:// if included
+                if(substr(strtolower($url), 0, 8) == "https://") $url = substr($url, 8); // remove http:// if included
+                if(substr(strtolower($url), 0, 4) == "www.") $url = substr($url, 4);//remove www from domain
+               
+               
+               $url_parts = explode("/", $url);
+                     $url = $url_parts[0];
+                  echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : ' investigating IP Addresses and URLs with the common web based tools'});</script>";
+          shell("echo 'Investigating IP Addresses and URLs with  common web based tools' ");
+      
+          shell("sudo automater -t $url|sed -e'1,13d'");
+          
+            echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Success!Please refer result section after this message'});</script>";
+           
+
+                               break;
 
                   
              default :
@@ -737,7 +781,20 @@ if($domain) {
                                     <p>Checks the age of input domain</p>
                                     <p><b>Alexa</b></p>
                                     <p>Alexa is the leading provider of free, global web metrics.Vist <a href="http://www.alexa.com/" target="_blank">Alexa</a>for more information</p>
-                                    
+                                    <p><b>Automater</b></p>
+                                    <p>Automator is a IP and URL Passive Analysis tool</p>
+
+                                    <p><b>Urlcrazy</b></p>
+                                    Generate and test domain typos and variations to detect and perform
+                                    <ul><li> URL hijacking</li><li>phishing</li><li>corporate espionage.</li></ul>
+
+Supports the following domain variations:
+<ul><li>Character omission, character repeat, adjacent character swap,
+    </li><li>adjacent character replacement, double 
+        character replacement, adjacent character insertion</li><li> missing dot, strip dashes, singular or pluralise,
+        common misspellings, vowel swaps, homophones</li><li>bit flipping (cosmic rays), homoglyphs, wrong top level 
+domain, and wrong second level domain.
+</li></ul>
                                 </div>
 		</article><!-- end of styles article -->
                 

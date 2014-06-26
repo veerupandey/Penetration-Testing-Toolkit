@@ -109,6 +109,7 @@
                     <li class="icn_settings"><a href="index.php">Nmap Scanner Menu</a></li>
 			<li class="icn_security"><a href="vuln.php">Web Scanner</a></li>
                      <li class="icn_categories"><a href="uni.php">URL Fuzzer</a></li>
+                     <li class="icn_jump_back"><a href="cms.php">BlindElephant Scan</a></li>
 			<li class="icn_security"><a href="sweep.php">Ping Sweep</a></li>
                        
                         
@@ -118,6 +119,7 @@
                     <li class="icn_settings"><a href="info.php">Information gathering</a></li>
 			<li class="icn_categories"><a href="harvester.php">TheHarvester</a></li>
                         <li class="icn_security"><a href="google.php">Google Hacking</a></li>
+                        <li class="icn_categories"><a href="dmtool.php">Domain Tools</a></li>
                          
                 </ul>
                
@@ -143,33 +145,12 @@
 		<h3>Network Tools</h3>
 		<ul class="toggle">
 			<li class="icn_security"><a href="dns.php">DNS Queries</a></li>
-			<li class="icn_categories"><a href="ip.php">IP Address</a></li>
                         <li class="icn_jump_back"><a href="web.php">Web Tools</a></li>
-                        <li class="icn_settings"><a href="net.php">Network Tests</a></li>
+                        <li class="icn_settings"><a href="net.php">Net Tools</a></li>
                      
 		</ul>
 
-		
-		
-                
-                <h3>Domain Tools</h3>
-		<ul class="toggle">
-			<li class="icn_settings"><a href="dmtool.php">Domain info</a></li>
-                         <li class="icn_security"><a href="domain.php">Domain tools</a></li>
-			
-			
-		</ul>
-
-                <h3>CMS Explorer</h3>
-		<ul class="toggle">
-			<li class="icn_settings"><a href="wordpress.php">Wordpress</a></li>
-			<li class="icn_security"><a href="joomla.php">Joomla</a></li>
-			<li class="icn_categories"><a href="drupal.php">Drupal</a></li>
-                        <li class="icn_jump_back"><a href="cms.php">Detect CMS Version</a></li>
-		</ul>
-		
-  
-		
+	
                 <h3>Other Web Tools</h3>
                 <ul class="toggle">
                    

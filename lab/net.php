@@ -34,7 +34,7 @@ require_once 'u.php';
 		<div class="clear"></div>
 		
 		<article class="module width_full">
-			<header><h3>Network Tests</h3></header>
+			<header><h3>Net Tools</h3></header>
 				<div class="module_content">
 <form name="form1" action="" method="post">
 						<fieldset>
@@ -52,12 +52,17 @@ require_once 'u.php';
           <td><input type="radio" name="c" value="c2"></td> 
           <td>Test Ping</td> </tr></p>
 
-						<p>  <tr> 
-          <td><input type="radio" name="c" value="c3"></td> 
-    				<td>NPing</td> 
+						
                                 <p>  <tr> 
-                                    <td><input type="radio" name="c" value="c4" checked="true"></td> 
-    				<td>ICMP monitoring(fping)</td> 
+                                    <td><input type="radio" name="c" value="c3" checked="true"></td> 
+                                    <td>ICMP monitoring(fping)</td></tr></p> 
+    <p>  <tr> 
+          <td><input type="radio" name="c" value="c4"></td> 
+          <td>IP Address Geolocation</td> </tr></p>
+    <p>  <tr> 
+          <td><input type="radio" name="c" value="c5"></td> 
+          <td>Reverse IP Lookup</td> </tr></p>
+    
     </fieldset>
 						
 						<div class="clear"></div>
@@ -65,8 +70,8 @@ require_once 'u.php';
 			<footer>
 				<div class="submit_link">
 					
-                                    <input type="submit" name="submit" value="Start Network Test" class="alt_btn" id="submit">
-                                    <a href="net.php"><input type="button" value="Reset" id="reset"></a>
+                                    <input type="submit" name="submit" value="Start" class="alt_btn" id="submit">
+                                    <input type="reset" value="Reset" id="reset">
 				</div>
                             
 			</footer>
@@ -118,16 +123,8 @@ require_once 'u.php';
                                      
  echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'ping Done for $url'});</script>";
                   break;
-              case c3:
-                  
-              echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Nping!Please refer result section after this message'});</script>";
-            echo "<p><b>Nping for $url</b></p>";
-            shell("nping $url");
-                               
- echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Nping Done for $url'});</script>";
-            
-            break;
-        case c4:
+             
+        case c3:
                   
               echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'ICMP Monitoring!Please refer result section after this message'});</script>";
             echo "<p><b>fping for $url</b></p>";
@@ -137,6 +134,29 @@ require_once 'u.php';
                              
         
             break;
+              case c4:
+                  echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Execution Started!Please refer result section after this message'});</script>";
+            
+                       echo "<p><b>Getting GeoLocation of target IP $url </b></p> ";
+                  shell("sudo python ./cmd/geoedge.py $url|grep 'IP\|Country\|City\|Coordinates'");
+                  
+                  break;
+              case c5:
+                 if(filter_var($url, FILTER_VALIDATE_IP))
+                 {
+                      echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : '$url is not a valid URL'});</script>";
+            
+                     echo "$url is Not a Valid URL";
+                      
+                 }else{
+                      echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Execution Started!Please refer result section after this message'});</script>";
+            
+                     echo "<p><b>Reverse IP for $url</b></p>"; 
+                  shell("host $url");
+                
+                 }
+               
+                  break;
           }
   
 

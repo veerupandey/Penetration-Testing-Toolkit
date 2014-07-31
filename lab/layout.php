@@ -81,7 +81,7 @@
 </head>
 
 
-<body onload="dvProgress.style.display = 'none';">
+<body  onload="dvProgress.style.display = 'none'; ">
 
 	<header id="header">
 		<hgroup>

@@ -95,7 +95,7 @@ require_once 'u.php';
                
  else {
       
-      echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Execution Started!Please refer result section after this message'});</script>";
+      echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'BlindElephant scan for $url ! Please refer result section after this message'});</script>";
                    require_once 'loading.php';
                    if (isset($check))
                    {
@@ -110,7 +110,7 @@ require_once 'u.php';
 
 
         
-        echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Execution Finished!You Can see Full result in result section'});</script>";
+        echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'BlindElephant Scan ! See Full result in result section'});</script>";
             
      
         

@@ -77,6 +77,8 @@ require_once 'u.php';
               }
                
  else {
+      echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Doing Nmap Scan for $url ! You Can see Full result in result section'});</script>";
+         
       require_once 'loading.php';
 	if(preg_match("#;|\||&|%#", $url)){ die("Bad, very bad, this characters are not accepted: ; | & %");}
 	
@@ -98,11 +100,6 @@ $url = trim($url); //remove space from start and end of url
                     
 shell("sudo nmap $str $url");
 	
-        
-        echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Execution Finished!You Can see Full result in result section'});</script>";
-            
-     
-        
          
    
          echo '</div>
@@ -116,7 +113,11 @@ shell("sudo nmap $str $url");
                  <h4 class="alert_success">Scan Succeeded </h4>
                  
  ';
-         
+     
+        echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Nmap Done ! See result in result section'});</script>";
+            
+     
+               
           
                      
  }

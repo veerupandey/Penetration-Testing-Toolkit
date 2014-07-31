@@ -76,7 +76,8 @@ require_once 'loading.php';
  else {
   	if(preg_match("#;|\||&|%#", $url)){ die("Bad, very bad, this characters are not accepted: ; | & %");}
 	
-
+echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Uniscan for $url !You Can see Full result in result section'});</script>";
+          
 	foreach ($_POST['options'] as $key => $value) {
 		if(preg_match("#;|\||&|%#", $value)){
 			die("Bad, very bad, this characters are not accepted: ; | & %");
@@ -88,12 +89,7 @@ $str.=$value;
 shell("echo 'Starting uniscan..'");
 shell("sudo uniscan -b $str -u  $url|sed -e '1,8d'");
 	
-        
-        echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Execution Finished!You Can see Full result in result section'});</script>";
-            
-     
-        
-         
+      
    
          echo '</div>
                                     <footer>
@@ -107,7 +103,12 @@ shell("sudo uniscan -b $str -u  $url|sed -e '1,8d'");
                  
  ';
          
-          
+      
+        echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Scanning Done !You Can see Full result in result section'});</script>";
+            
+     
+        
+               
                      
  }
 }            

@@ -117,7 +117,7 @@ require_once 'u.php';
  else 
               
                {
-                   echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Execution Started!Please refer result section after this message'});</script>";
+                   echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Started ! Please refer result section after this message'});</script>";
       
                      require_once 'loading.php';
                       
@@ -174,7 +174,7 @@ require_once 'u.php';
              
     
      }
-    echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Execution Finished!You Can see Full result in result section'});</script>";
+    echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Done ! See Full result in result section'});</script>";
             
      
         

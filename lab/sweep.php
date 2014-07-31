@@ -91,7 +91,8 @@ require_once 'u.php';
      break;
                    }
                   
-                    
+    echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content :'Scanning Done '});</script>";
+                      
                     
          echo '</div>
                                     <footer>

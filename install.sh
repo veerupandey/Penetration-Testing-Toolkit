@@ -82,11 +82,11 @@ chmod 777 -R $path/lab
 echo "Do you hav metasploit installed [y/n] ?:"
 read ans	
 if [ $ans = y  ]; then
-	apt-get install nmap mingw32 mingw32-runtime mingw-w64 mingw32-binutils siege  nikto whatweb sslyze  wapiti amap  xprobe dmitry blindelephant dnstracer curl lynx mtr fping urlcrazy automater shellinabox nbtscan weevely amap
+	apt-get install shellinabox nmap mingw32 mingw32-runtime mingw-w64 mingw32-binutils siege  nikto whatweb sslyze  wapiti amap  xprobe dmitry blindelephant dnstracer curl lynx mtr fping urlcrazy automater shellinabox nbtscan weevely amap shellinabox
 
  else
 	if [ $ans = n ];then
-        apt-get install nmap mingw32 mingw32-runtime mingw-w64 mingw32-binutils siege msf nikto whatweb sslyze wapiti amap  xprobe dmitry blindelephant dnstracer curl lynx mtr fping urlcrazy automater shellinabox nbtscan weevely amap
+        apt-get install shellinabox nmap mingw32 mingw32-runtime mingw-w64 mingw32-binutils siege msf nikto whatweb sslyze wapiti amap  xprobe dmitry blindelephant dnstracer curl lynx mtr fping urlcrazy automater shellinabox nbtscan weevely amap shellinabox
 
 fi
 fi

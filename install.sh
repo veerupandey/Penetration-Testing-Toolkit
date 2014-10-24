@@ -24,7 +24,7 @@ fi
 echo "Do you want me to add backbox repositories(needed)[y/n] ?:"
 read ans
 if [ $ans = y  ]; then
-	echo "deb http://ppa.launchpad.net/backbox/three/ubuntu precise main">>/etc/apt/sources.list
+	echo "deb http://ppa.launchpad.net/backbox/four/ubuntu trusty main">>/etc/apt/sources.list
 	apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78A7ABE1 
  else
 	if [ $ans = n ];then
@@ -86,7 +86,7 @@ if [ $ans = y  ]; then
 
  else
 	if [ $ans = n ];then
-        apt-get install shellinabox nmap mingw32 mingw32-runtime mingw-w64 mingw32-binutils siege msf nikto whatweb sslyze wapiti amap  xprobe dmitry blindelephant dnstracer curl lynx mtr fping urlcrazy automater shellinabox nbtscan weevely amap shellinabox
+        apt-get install shellinabox nmap mingw32 mingw32-runtime mingw-w64 mingw32-binutils siege metasploit nikto whatweb sslyze wapiti amap  xprobe dmitry blindelephant dnstracer curl lynx mtr fping urlcrazy automater shellinabox nbtscan weevely amap shellinabox
 
 fi
 fi

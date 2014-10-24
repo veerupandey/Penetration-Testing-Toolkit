@@ -101,6 +101,7 @@ dpkg -i uniscan_6.2-1saucy0ubuntu1_all.deb
 apt-get -f install
 
 echo "Installation Complete........"
-echo "Visit http://localhost/lab"
+echo "Openining app...."
+xdg-open http://localhost/lab
 
 

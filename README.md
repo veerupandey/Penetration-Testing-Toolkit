@@ -21,7 +21,7 @@ Option 1(install.sh):
 ----------------------
 	cd Penetration-Testing-Toolkit-master
 	
-	chmod +x the install.sh
+	chmod +x install.sh
 	
 	./install.sh .
 

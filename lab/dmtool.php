@@ -37,85 +37,65 @@ require_once 'u.php';
 			<header><h3>Domain Tools</h3></header>
 				<div class="module_content">
 <form name="form1" action="" method="post">
-						<fieldset>
-							<label>Enter Domain</label>
-							<input type="text" name="url" id="ur" >
-                                                        
-						</fieldset>
-      
-      <p><input type="radio" name="c" value="c1" checked="true"></td> 
-    				<td>Domain Availaility Checker</td> 
-				</tr> 
-                                <p   <tr> 
-   					<td><input type="radio" name="c" value="c2"></td> 
-    				<td>Page Rank Checker</td> 
-                                </tr> </p>
-<p   <tr> 
-   					<td><input type="radio" name="c" value="c3"></td> 
-    				<td>Domain Age Checker</td> 
-                                </tr> </p>
-<p   <tr> 
-    <td><input type="radio" name="c" value="c4"></td> 
-    				<td>Get Alexa Rank</td> 
-                                </tr> </p>
-
-<p   <tr> 
-    <td><input type="radio" name="c" value="c5"></td> 
-    				<td>Find Sub Domains</td> 
-                                </tr> </p>
-<p   <tr> 
-    <td><input type="radio" name="c" value="c6"></td> 
-    				<td>Whois Lookup</td> 
-                                </tr> </p>
-<p   <tr> 
-    <td><input type="radio" name="c" value="c7"></td> 
-    				<td>Generate and Test Domain Typos</td> 
-                                </tr> </p>
-<p   <tr> 
-    <td><input type="radio" name="c" value="c8"></td> 
-    				<td> Investigate domain with the common web based tools(Automator) </td> 
-                                </tr> </p>
-
-
-
-						
+  <fieldset>
+  <legend>Target:</legend>
+        <label for="ur">URL:</label><input id="ur" type="text" name="url" value="" />
+</fieldset>			
+    <fieldset>          
+        <legend>Scan Options</legend>
+        <p> <input type="checkbox" name="c1" >Domain Availaility Checker</p>
+        <p> <input type="checkbox" name="c2" checked="true">Page Rank Checker</p>
+        <p> <input type="checkbox" name="c3" >Domain Age Checker</p> 
+        <p><input type="checkbox" name="c4"> Get Alexa Rank</p>
+        <p> <input type="checkbox" name="c5">Find Sub Domains</p>
+          <p> <input type="checkbox" name="c6">Generate and Test Domain Typos</p>
+               <p> <input type="checkbox" name="c7">Who Is Lookup</p>
+        <p><input type="checkbox" name="c8"> Investigate domain with the common web based tools(Automator)</p>
+          </fieldset>	
+   
+   
 						<div class="clear"></div>
 				</div>
 			<footer>
 				<div class="submit_link">
 					
-                                    <input type="submit" name="submit" value="Start Now" class="alt_btn" id="submit">
-                                    <input type="reset" value="Reset" id="reset">
+                                    <input type="submit" name="submit" value="Start Scanning Now" class="alt_btn" id="submit">
+                                    <input type="reset" value="Reset" id="reset"></a>
 				</div>
 			</footer>
 		</article><!-- end of post new article -->
+                
+						
+
+						
                 
                <?php
                
                 if(isset($_POST['submit']))
                 {
                     $url=$_POST['url'];
-                    $c=$_POST['c'];
+                    $c1=$_POST['c1'];
+ 						  $c2=$_POST['c2'];
+                    $c3=$_POST['c3'];
+                    $c4=$_POST['c4'];
+                    $c5=$_POST['c5'];
+                    $c6=$_POST['c6'];
+                    $c7=$_POST['c7'];
+                    $c8=$_POST['c8'];
                    
                     
-       
-               
-               if($url==''){
-              
-                 echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Generating Domain Typos!Please refer result section after this message'});</script>";
-         
+          require_once 'loading.php';     
+            if($url==''){
+                    echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : 'You Have not entered any URL.Please enter an URL to continue..'});</script>";
+                  die("!!!!You Have Not Entered any URL!!!!");
                }
- else {
-             
-      if(isset($c))
-      {
-         
-          require_once 'loading.php';
-          switch ($c)
-          {
-              case c1:
+            
+            if(isset($c1)||isset($c2)||isset($c3)||isset($c4)||isset($c5)||isset($c6)||isset($c7)||isset($c8))
+            {
                  
-                  echo "<p><b>Checking domain availability for $url </b></p> ";
+           if(isset($c1)){
+         
+                                echo "<p><b>Checking domain availability for $url </b></p> ";
                    if(checkdnsrr($url,'ANY')){
                  echo "<p>Domain <b><font  color='red' >$url</font></b> is <font size='5' color='orange'>taken</font></p>";
                                  }else{
@@ -150,8 +130,9 @@ require_once 'u.php';
                          echo "<p><font color='green'>Available........</font><b>$dm</b></p>";  
                         }
                   }
-                   break;
-              case c2:
+}
+                   if(isset($c2))
+                           {
                   
   class PR {
  public function get_google_pagerank($url) {
@@ -219,8 +200,9 @@ require_once 'u.php';
 }
                  $pr = new PR();
                 echo "$url has Google PageRank: ". "<b><font size='15' color='red'>".$pr->get_google_pagerank($url)."</font></b>" ; 
-                  break;
-              case c3:
+                 }
+
+if(isset($c3)){
                 echo "<p><b>Checking Domain $url Age</b></p>";
                   class DomainAge{
   private $WHOIS_SERVERS=array(
@@ -300,8 +282,10 @@ $domain="=".$domain;
 $w=new DomainAge();
 echo "<p><b><font size='4' color='green' >".$w->age("$url")."</font></b></p>";
                   
-                  break;
-              case c4:
+ }
+
+
+ if(isset($c4)){
                   echo "<p><b>Getting Alexa Rank for $url</b></p>";
              
 
@@ -313,24 +297,17 @@ echo "<p><b>Getting Backlinks for $url</b></p>";
 $backlink=(int)$xml->SD[0]->LINKSIN->attributes()->NUM;
 echo "<b><font color='red'></b>".$web."</font></b>"." has Alexa Backlinks "."<b><font size='6' color='green'>".$backlink."</font></b>";
 
-
-                  break;
+}
              
-          
-                  
-                   
-             
-              case c5:
+ if(isset($c5)){
                   echo "<p><b>Finding Subdomains of  $url</b></p>";
                   shell("");
                  
 shell("dmitry -s $url");
+}
 
 
-
-                  break;
-              case c6:
-               
+  if(isset($c6)){
 
 $domain = $url;
 
@@ -705,8 +682,9 @@ if($domain) {
 	echo "<pre>\n" . $result . "\n</pre>\n";
 }
 
-                 break;
-              case c7:
+}
+
+  if(isset($c7)){
                      $url = trim($url); //remove space from start and end of domain
                 if(substr(strtolower($url), 0, 7) == "http://") $url = substr($url, 7); // remove http:// if included
                 if(substr(strtolower($url), 0, 8) == "https://") $url = substr($url, 8); // remove http:// if included
@@ -720,11 +698,10 @@ if($domain) {
           echo "<p><b>Generating and Testing Domain Typs</b></p>";
           shell("");
           shell("urlcrazy $url");
-          echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Domain Typos Generated!Please refer result section after this message'});</script>";
-          
-                 break;
+            
+ }
                  
-              case c8:
+  if(isset($c8)){
                    $url = trim($url); //remove space from start and end of domain
                 if(substr(strtolower($url), 0, 7) == "http://") $url = substr($url, 7); // remove http:// if included
                 if(substr(strtolower($url), 0, 8) == "https://") $url = substr($url, 8); // remove http:// if included
@@ -737,23 +714,10 @@ if($domain) {
           shell("echo 'Investigating IP Addresses and URLs with  common web based tools' ");
       
           shell("sudo automater -t $url|sed -e'1,13d'");
-          
-            echo "<script type='text/javascript'>$.msg({ fadeIn : 500,fadeOut : 500, bgPath : 'dlgs/',  content : 'Success!Please refer result section after this message'});</script>";
-           
+                  }
 
-                               break;
-
-                  
-             default :
-                 echo "<p>You Have Not choosen any task to perform</p>";
-          }
-  
-                   
- }            
-                     
-     }
-                
-      echo '</div>
+                 
+         echo '</div>
                                     <footer>
 				<div align="left">
 					
@@ -762,9 +726,16 @@ if($domain) {
 			</footer>
 		</article><!-- end of styles article -->
                  <h4 class="alert_success">Scan Succeeded </h4>
-                 
- ';
-                }
+                
+            ';}
+ else {
+     echo "<script type='text/javascript'>$.msg({fadeIn : 500,fadeOut : 500,bgPath : 'dlgs/',  content : '!!!!You have not selected any option!!!!'});</script>";
+                  
+                die("!!!!You Have Not Selected any option!!!!");
+            }
+ }
+         
+  
                 
  ?>
                 
